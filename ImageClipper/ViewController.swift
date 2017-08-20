@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     
     let image = UIImage(named: "flowers.png")
 
-    // マスク用画像
     let maskImage = UIImage(named:"ninjya.png")!
     
     override func viewDidLoad() {
@@ -30,6 +29,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func choiceImageButtonClicked(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func choiceFrameButtonClicked(_ sender: UIButton) {
         
     }
     
