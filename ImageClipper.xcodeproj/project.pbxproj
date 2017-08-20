@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0514257A1F49C98F00E9357F /* FrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051425791F49C98F00E9357F /* FrameViewController.swift */; };
 		AFA61BE11F34B488001C678A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA61BE01F34B488001C678A /* AppDelegate.swift */; };
 		AFA61BE31F34B488001C678A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA61BE21F34B488001C678A /* ViewController.swift */; };
 		AFA61BE61F34B488001C678A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA61BE41F34B488001C678A /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		051425791F49C98F00E9357F /* FrameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameViewController.swift; sourceTree = "<group>"; };
 		AFA61BDD1F34B488001C678A /* ImageClipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageClipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA61BE01F34B488001C678A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA61BE21F34B488001C678A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				AFA61BE01F34B488001C678A /* AppDelegate.swift */,
 				AFA61BE21F34B488001C678A /* ViewController.swift */,
+				051425791F49C98F00E9357F /* FrameViewController.swift */,
 				AFA61BE41F34B488001C678A /* Main.storyboard */,
 				AFA61BE71F34B488001C678A /* Assets.xcassets */,
 				AFA61BE91F34B488001C678A /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0514257A1F49C98F00E9357F /* FrameViewController.swift in Sources */,
 				AFA61BE31F34B488001C678A /* ViewController.swift in Sources */,
 				AFA61BE11F34B488001C678A /* AppDelegate.swift in Sources */,
 			);
