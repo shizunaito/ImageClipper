@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var clippedImageView: UIImageView!
     
@@ -26,7 +26,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func choiceImageButtonClicked(_ sender: UIButton) {
-        clippedImageView.image = image
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let pickerView = UIImagePickerController()
+            pickerView.sourceType = .photoLibrary
+            pickerView.delegate = self
+            present(pickerView, animated: true)
+        }
     }
     
     @IBAction func choiceFrameButtonClicked(_ sender: UIButton) {
@@ -38,6 +43,13 @@ class ViewController: UIViewController {
         }
         clippedImageView.image = rootImage.mask(image: maskImage)
 
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        image = selectedImage
+        clippedImageView.image = image
+        self.dismiss(animated: true)
     }
 }
 
