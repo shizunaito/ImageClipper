@@ -12,15 +12,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var clippedImageView: UIImageView!
     
-    let image = UIImage(named: "flowers.png")
-
-    let maskImage = UIImage(named:"ninjya.png")!
+    var image: UIImage?
+    var maskImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        clippedImageView.image = image
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,15 +26,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func choiceImageButtonClicked(_ sender: UIButton) {
-        
+        clippedImageView.image = image
     }
     
     @IBAction func choiceFrameButtonClicked(_ sender: UIButton) {
-        
     }
     
     @IBAction func clipButtonClicked(_ sender: UIButton) {
-        guard let rootImage = image else {
+        guard let rootImage = image, let maskImage = maskImage else {
             return
         }
         clippedImageView.image = rootImage.mask(image: maskImage)
